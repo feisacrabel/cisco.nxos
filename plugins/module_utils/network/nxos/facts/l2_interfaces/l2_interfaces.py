@@ -54,7 +54,7 @@ class L2_interfacesFacts(object):
         """
         objs = []
         if not data:
-            data = connection.get("show running-config | section ^interface")
+            data = connection.get("show running-config all | section ^interface")
 
         config = data.split("interface ")
         for conf in config:
